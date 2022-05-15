@@ -120,7 +120,7 @@ class MuModel():
     a_all, mu_all, loss_all = [], [], []
 
     def softmax_ce_logits(y_true, y_pred):
-      return tf.nn.softmax_cross_entropy_with_logits_v2(y_true, y_pred)
+      return tf.compat.v1.nn.softmax_cross_entropy_with_logits_v2(y_true, y_pred)
 
     # run f on the first state
     if self.with_policy:
